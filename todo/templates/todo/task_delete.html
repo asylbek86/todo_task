@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+  <div>
+    <center>
+        <h1>Удалить </h1>
+             <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-danger">Удалить</button>
+            </form>
+        <a href="{% url 'task_list' %}">Отмена</a>
+    </center>
+</div>
+</body>
+</html>
